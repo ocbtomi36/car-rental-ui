@@ -1,7 +1,7 @@
-
+import Header from "./components/Header";
 
 const App = () => {
-  return ( <div>Rate your experience</div> );
+  return ( <Header></Header> );
 }
  
 export default App;
