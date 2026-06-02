@@ -86,6 +86,7 @@ p {
 /* Navbar */
 
 .navbar__container {
+    padding-top: 10px;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -445,6 +446,9 @@ p {
 }
 /* Media Querries */
 
-@media screen {
-  
+@media (max-width: 992px) {
+  .navbar__container {
+    justify-content: center;
+    padding-top: 16px;
+  }
 }
