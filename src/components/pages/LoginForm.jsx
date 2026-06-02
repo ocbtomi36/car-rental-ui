@@ -16,7 +16,7 @@ const LoginForm = () => {
                     <div className="remember-forgot">
                         <p>If forgot your password please contant our technicals</p>
                     </div>
-                    <a href="./index.html" className="login-button btn">Login</a>
+                    <a href="./mainscreen" className="login-button btn">Login</a>
                 </form>            
             </div>
         </div>
