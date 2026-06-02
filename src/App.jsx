@@ -1,7 +1,18 @@
-import Header from "./components/Header";
+import Login from "./components/pages/Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginForm from "./components/pages/LoginForm";
 
 const App = () => {
-  return ( <Header></Header> );
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login/>} />
+          <Route path="/loginform" element={<LoginForm />} />
+        </Routes>
+      </Router>
+    </>
+  )
 }
  
 export default App;

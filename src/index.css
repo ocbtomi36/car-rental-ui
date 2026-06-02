@@ -71,7 +71,7 @@ p {
 /* Header */
 
 .hero {
-    background-image: url('./images/pexels-mb-productions-2150595454-31223311.jpg');
+    background-image: url('./assets/pexels-mb-productions-2150595454-31223311.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -442,4 +442,9 @@ p {
 .upd_del__btn:hover {
    color: var(--dark-secondary-color);
    cursor: pointer;
+}
+/* Media Querries */
+
+@media screen {
+  
 }
