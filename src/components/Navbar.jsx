@@ -11,8 +11,8 @@ const Navbar = () => {
     <>
         <div className="navbar__menu">
             <ul className="navbar__menu-list">
-                <li className="navbar__menu-item"><a className="navbar__btn btn" href="./userDetail" target="_blank">Users</a></li>
-                <li className="navbar__menu-item"><a className="navbar__btn btn" href="./carDetail" target="_blank">Cars</a></li>
+                <li className="navbar__menu-item"><a className="navbar__btn btn" href="/users" target="_blank">Users</a></li>
+                <li className="navbar__menu-item"><a className="navbar__btn btn" href="/car" target="_blank">Cars</a></li>
             </ul>
         </div>
         <div className="navbar__mobile-menu">
