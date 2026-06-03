@@ -233,7 +233,80 @@ p {
     padding-top: 4px;
     border-radius: 0px;
 }
+/* Login form */
 
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.login-wrapper {
+    width: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    margin-top: 3rem;
+}
+.login-wrapper .login-body__heading {
+    font-size: 2rem;
+    font-weight: 500;              
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: var(--dark-primary-color);
+    opacity: 0.9;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.login-wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 3.1rem;
+    margin: 1.9rem 0px;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    color: var(--dark-primary-color);
+    background-color: transparent;
+    outline:none;
+    border-bottom: 2px solid var(--dark-primary-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1rem;
+    padding: 1.5rem 2.8rem 1.5rem 1.5rem;
+}
+.input-box input::placeholder {
+    color: var(--dark-secondary-color);
+}
+
+.login-wrapper .input-box i {
+    color: var(--dark-secondary-color);
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+.login-wrapper .remember-forgot{
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--dark-primary-color);
+    
+}
+.login-button {
+    height: 2.9rem;
+    line-height: 2.9rem;
+    color: var(--dark-primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.login-button:hover {
+    color: var(--dark-secondary-color);
+    border-bottom: 2px solid var(--dark-primary-color);
+}
 
 /* Tablet */
 @media (max-width:768px) {
