@@ -1,5 +1,5 @@
-import Logo from "../shared/Logo";
-import Navbar from "../Navbar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const MainScreen = () => {
     return (  
@@ -16,11 +16,14 @@ const MainScreen = () => {
                                 <li className="navbar__menu-item"><a className="navbar__btn btn" href="./carDetail.html" target="_blank">Cars</a></li>
                             </ul>
                         </div>
-                        <div className="navbar__mobile-menu active">
-                            <div className="navbar__mobile-menu-toggle">
-                                <i className="fas fa-bars fa-2x"></i>
+                        <div className="navbar__mobile-menu">
+                            <div className="navbar__mobile-menu-toggle" onClick={() => {
+                                const mobileMenu = document.querySelector('.navbar__mobile-menu-items')
+                                    mobileMenu.classList.toggle('active');
+                            }}>
+                                <FontAwesomeIcon icon={faBars} size='{2x}' className='fas'/>
                             </div>
-                            <div className="navbar__mobile-menu-items">
+                            <div className="navbar__mobile-menu-items active">
                                 <ul className="navbar__mobile-menu-list">
                                     <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="./userDetail.html" target="_blank">Users</a></li>
                                     <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="./carDetail.html" target="_blank">Cars</a></li>

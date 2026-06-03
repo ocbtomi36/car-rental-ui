@@ -156,15 +156,19 @@ p {
 .navbar__mobile-menu-items {
     transform: translateX(100%);
 }
+
 .navbar__mobile-menu-items.active {
     transform: translateX(0);
 }
 .navbar__mobile-menu-link:hover {
     color: var(--secondary-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-.fas.fa-bars {
+.fas {
     color: var(--dark-secondary-color);
+    font-size: 1.5rem;
 }
 
 /* Logo Styleing */
