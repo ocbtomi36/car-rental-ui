@@ -307,28 +307,42 @@ p {
     color: var(--dark-secondary-color);
     border-bottom: 2px solid var(--dark-primary-color);
 }
+/* User Management Page */
+
+.navbar__headline-text{
+    color: var(--dark-primary-color);
+}
+.fas.user-management {
+    color: var(--dark-primary-color);
+}
+
 
 /* Tablet */
 @media (max-width:768px) {
 
-    .main-content__btn {
-        font-size: 3rem;
-    }
-    .main-content__btn:hover {
-    
-    border-bottom: 3px solid var(--dark-primary-color);
-    cursor:pointer;
-    }
-    
-}
-/* Mobil */
-@media (max-width: 576px) {
     .navbar__menu {
         display: none;
     }
     .navbar__mobile-menu {
         display: block;
+
     }
+    .main-content__btn {
+        font-size: 3rem;
+    }
+    .main-content__btn:hover {
+    
+        border-bottom: 3px solid var(--dark-primary-color);
+        cursor:pointer;
+    }
+    .navbar__mobile-menu.mobile-view {
+        display: block;
+    }
+    
+}
+/* Mobil */
+@media (max-width: 576px) {
+    
     .main-content__btn {
         font-size: 2rem;
     }
