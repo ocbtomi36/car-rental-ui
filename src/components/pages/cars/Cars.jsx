@@ -11,7 +11,7 @@ const Cars = () => {
             <div className="navbar__container container">
                 <h1 className="navbar__headline-text">Car Management</h1>
                 <Navbar>
-                    <li className="navbar__menu-item"><a className="navbar__btn btn" href="/allCars" target="_blank">Cars</a></li>
+                    <li className="navbar__menu-item"><a className="navbar__menu-link">Cars</a></li>
                 </Navbar>
                  <div className="navbar__mobile-menu">
                     <HamburgerIcon />
