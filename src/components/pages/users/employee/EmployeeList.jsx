@@ -3,7 +3,7 @@ import EmployeeItem from "./EmployeeItem";
 const EmployeeList = ({employees, showEmployee}) => {
 
     if(!employees || employees.length === 0) {
-       return <p>There is no employee to display</p>
+       return <p className="hint">There is no employee to display</p>
     }
     return ( 
         <div className="card-container container">

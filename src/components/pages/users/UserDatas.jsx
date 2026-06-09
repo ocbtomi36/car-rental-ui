@@ -3,7 +3,7 @@ const EmployeeDatas = [
         id: 1,
         givenName: "Béla",
         familyName: "Kiss",
-        role: "Manager",
+        role: "Customer",
         email: "bela.kiss@company.com"
     },
     {
@@ -24,14 +24,14 @@ const EmployeeDatas = [
         id: 4,
         givenName: "László",
         familyName: "Szabó",
-        role: "HR",
+        role: "Customer",
         email: "laszlo.szabo@company.com"
     },
     {
         id: 5,
         givenName: "Anna",
         familyName: "Kovács",
-        role: "Manager",
+        role: "Customer",
         email: "anna.kovacs@company.com"
     },
     {

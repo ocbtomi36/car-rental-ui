@@ -3,8 +3,8 @@ import MobileNavbar from "../../MobileNavbar";
 import HamburgerIcon from "../../HamburgerIcon";
 
 
-const Users = () => {
 
+const Users = () => {
     return (  
         <>
     <main className="hero">

@@ -5,6 +5,7 @@ import MainScreen from "./components/pages/MainScreen"
 import Users from "./components/pages/users/Users"
 import Cars from "./components/pages/cars/Cars";
 import Employees from "./components/pages/users/employee/Employees";
+import Customers from "./components/pages/users/customer/Customers";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/users" element={<Users/>} />
           <Route path="/cars" element={<Cars/>} />
           <Route path="/employees" element={<Employees/>} />
+          <Route path="/customers" element={<Customers/>} />
         </Routes>
       </Router>
     </>

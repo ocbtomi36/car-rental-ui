@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-
-const EmployeeItem = ({item, showEmployee}) => {
+const CustomerItem = ({item, showCustomer}) => {
     return ( 
-        <div className={`card ${showEmployee && 'disabled'}`}>
+        <div className={`card ${showCustomer && 'disabled'}`}>
                 <div className="card-name">
                     <p>{item.givenName}</p>
                     <p>{item.familyName}</p>
@@ -14,9 +13,9 @@ const EmployeeItem = ({item, showEmployee}) => {
      );
 }
 
-EmployeeItem.propTypes = {
+CustomerItem.propTypes = {
     item: PropTypes.node.isRequired,
     showEmployee: PropTypes.bool.isRequired
 }
 
-export default EmployeeItem;
+export default CustomerItem;
