@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginForm from "./components/pages/LoginForm";
 import MainScreen from "./components/pages/MainScreen"
 import Users from "./components/pages/users/Users"
-import Cars from "./components/pages/cars/Cars";
+import Vehicle from "./components/pages/vehicle/Vehicle";
 import Employees from "./components/pages/users/employee/Employees";
 import Customers from "./components/pages/users/customer/Customers";
 
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/loginform" element={<LoginForm />} />
           <Route path="/mainscreen" element={<MainScreen/>} />
           <Route path="/users" element={<Users/>} />
-          <Route path="/cars" element={<Cars/>} />
+          <Route path="/vehicle" element={<Vehicle/>} />
           <Route path="/employees" element={<Employees/>} />
           <Route path="/customers" element={<Customers/>} />
         </Routes>

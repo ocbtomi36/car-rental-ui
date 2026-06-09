@@ -1,8 +1,8 @@
 const MobileNavbar = ({children}) => {
 
     return (  
-        <div class="navbar__mobile-menu-items">
-            <ul class="navbar__mobile-menu-list">
+        <div className="navbar__mobile-menu-items">
+            <ul className="navbar__mobile-menu-list">
                 {children}                            
             </ul>
         </div>
