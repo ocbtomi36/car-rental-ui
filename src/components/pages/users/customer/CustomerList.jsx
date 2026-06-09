@@ -17,7 +17,7 @@ const CustomerList = ({customers, showCustomers}) => {
  
 CustomerList.propTypes = {
     customers: PropTypes.array.isRequired,
-    showCustomers: PropTypes.showCustomers.isRequired
+    showCustomers: PropTypes.bool.isRequired
 } 
 
 export default CustomerList;

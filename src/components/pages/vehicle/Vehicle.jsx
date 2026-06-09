@@ -30,7 +30,7 @@ const Vehicle = () => {
                  <div className="navbar__mobile-menu">
                     <HamburgerIcon />
                     <MobileNavbar>
-                        <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/allCars" target="_self">List all Vehicle</a></li>
+                        <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" onClick={handleClick} target="_self">List all Vehicle</a></li>
                         <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/allCars" target="_self">Add New Vehicle</a></li>
                         <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/mainscreen" target="_self">Back</a></li>
                     </MobileNavbar>

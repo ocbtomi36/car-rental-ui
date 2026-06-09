@@ -1,7 +1,6 @@
 import VehicleItem from "./VehicleItem";
 import PropTypes from "prop-types";
 const VehicleList = ({vehicles, showVehicle}) => {
-    console.log(showVehicle)
     if(!vehicles || vehicles.length === 0) {
        return <p className="hint">There is no employee to display</p>
     }

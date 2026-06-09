@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 
 const VehicleItem = ({item, showVehicle}) => {
-    console.log(showVehicle)
+
     return ( 
         <div className={`card ${showVehicle && 'disabled'}`}>
                 <div className="card-name">
