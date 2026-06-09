@@ -26,13 +26,15 @@ const Employees = () => {
                         <h1 className="navbar__headline-text">Employees</h1>
                         <Navbar>
                             <li className="navbar__menu-item"><a onClick={handleClick} className="navbar__menu-link">List All Employees</a></li>
-                            <li className="navbar__menu-item"><a className="navbar__menu-link" href="/addEmployee" target="_blank">Add New Employee</a></li>
+                            <li className="navbar__menu-item"><a className="navbar__menu-link" href="/addEmployee" target="_self">Add New Employee</a></li>
+                            <li className="navbar__menu-item"><a className="navbar__menu-link" href="/users" target="_self">Back</a></li>
                         </Navbar>
                         <div className="navbar__mobile-menu">
                             <HamburgerIcon />
                             <MobileNavbar>
-                                <li className="navbar__mobil-menu-item"><a onClick={handleClick} className="navbar__mobile-menu-link" >List All Employees</a></li>
-                                <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" >Add New Employee</a></li>
+                                <li className="navbar__mobil-menu-item"><a onClick={handleClick} className="navbar__mobile-menu-link" target="_self" >List All Employees</a></li>
+                                <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link"     target="_self">Add New Employee</a></li>
+                                <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/users" target="_self">Back</a></li>
                             </MobileNavbar>
                         </div>
                     </div>

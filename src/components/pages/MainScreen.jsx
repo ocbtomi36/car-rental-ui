@@ -14,14 +14,14 @@ const MainScreen = () => {
         <div className="navbar__container container">
             <Logo/>
             <Navbar>
-                 <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_blank">Users</a></li>
-                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="./cars" target="_blank">Cars</a></li>
+                 <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_self">Users</a></li>
+                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="./cars" target="_self">Cars</a></li>
             </Navbar>
             <div class="navbar__mobile-menu">
                 <HamburgerIcon/>
                 <MobileNavbar>
-                    <li class="navbar__mobile-menu-item"><a class="navbar__mobile-menu-link" href="./userDetail.html" target="_blank">Users</a></li>
-                        <li class="navbar__mobile-menu-item"><a class="navbar__mobile-menu-link" href="./carDetail.html" target="_blank">Cars</a></li>
+                    <li class="navbar__mobile-menu-item"><a class="navbar__mobile-menu-link" href="./users" target="_self">Users</a></li>
+                    <li class="navbar__mobile-menu-item"><a class="navbar__mobile-menu-link" href="./cars" target="_self">Cars</a></li>
                 </MobileNavbar>
             </div>
         </div>

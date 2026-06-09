@@ -9,7 +9,7 @@ const Login = () => {
                 </div>
             </div>
             <div className="main-content">
-                <a className="main-content__btn btn" href="./loginform" target="_blank">Login</a>
+                <a className="main-content__btn btn" href="./loginform" target="_self">Login</a>
             </div>
         </header>
     );
