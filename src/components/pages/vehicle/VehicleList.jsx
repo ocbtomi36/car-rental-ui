@@ -1,5 +1,5 @@
 import VehicleItem from "./VehicleItem";
-
+import PropTypes from "prop-types";
 const VehicleList = ({vehicles, showVehicle}) => {
     console.log(showVehicle)
     if(!vehicles || vehicles.length === 0) {
@@ -13,5 +13,10 @@ const VehicleList = ({vehicles, showVehicle}) => {
         </div>
      );
 }
- 
+
+VehicleList.propTypes = {
+    vehicles: PropTypes.array.isRequired,
+    showVehicle: PropTypes.bool.isRequired
+}
+
 export default VehicleList;

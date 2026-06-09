@@ -15,7 +15,7 @@ const EmployeeItem = ({item, showEmployee}) => {
 }
 
 EmployeeItem.propTypes = {
-    item: PropTypes.node.isRequired,
+    item: PropTypes.array.isRequired,
     showEmployee: PropTypes.bool.isRequired
 }
 

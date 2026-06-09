@@ -14,7 +14,7 @@ const CustomerItem = ({item, showCustomer}) => {
 }
 
 CustomerItem.propTypes = {
-    item: PropTypes.node.isRequired,
+    item: PropTypes.array.isRequired,
     showEmployee: PropTypes.bool.isRequired
 }
 

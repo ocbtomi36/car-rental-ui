@@ -1,4 +1,5 @@
 import EmployeeItem from "./EmployeeItem";
+import PropTypes from "prop-types";
 
 const EmployeeList = ({employees, showEmployee}) => {
 
@@ -13,5 +14,10 @@ const EmployeeList = ({employees, showEmployee}) => {
         </div>
      );
 }
- 
+
+EmployeeList.propType = {
+    employees: PropTypes.array.isRequired,
+    showEmployee: PropTypes.bool.isRequired
+}
+
 export default EmployeeList;

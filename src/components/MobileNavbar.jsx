@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const MobileNavbar = ({children}) => {
 
     return (  
@@ -8,5 +10,9 @@ const MobileNavbar = ({children}) => {
         </div>
     );
 }
- 
+
+MobileNavbar.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
 export default MobileNavbar;

@@ -16,7 +16,7 @@ const VehicleItem = ({item, showVehicle}) => {
 }
 
 VehicleItem.propTypes = {
-    item: PropTypes.node.isRequired,
+    item: PropTypes.array.isRequired,
     showEmployee: PropTypes.bool.isRequired
 }
 

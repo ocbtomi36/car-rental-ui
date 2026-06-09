@@ -1,4 +1,5 @@
 import CustomerItem from "./CustomerItem";
+import PropTypes from "prop-types";
 
 const CustomerList = ({customers, showCustomers}) => {
     
@@ -12,9 +13,11 @@ const CustomerList = ({customers, showCustomers}) => {
                 ))}
             </div>
          );
-
-
-
 }
  
+CustomerList.propTypes = {
+    customers: PropTypes.array.isRequired,
+    showCustomers: PropTypes.showCustomers.isRequired
+} 
+
 export default CustomerList;
