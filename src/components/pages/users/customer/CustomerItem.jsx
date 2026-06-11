@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-const CustomerItem = ({item, showCustomer}) => {
+const CustomerItem = ({item}) => {
     return ( 
-        <div className={`card ${showCustomer && 'disabled'}`}>
+        <div className="card">
                 <div className="card-name">
                     <p>{item.givenName}</p>
                     <p>{item.familyName}</p>

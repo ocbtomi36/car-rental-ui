@@ -14,7 +14,7 @@ const MainScreen = () => {
         <div className="navbar__container container">
             <Logo/>
             <Navbar>
-                 <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_self">Users</a></li>
+                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_self">Users</a></li>
                     <li className="navbar__menu-item"><a className="navbar__menu-link" href="./vehicle" target="_self">Vehicle</a></li>
             </Navbar>
             <div className="navbar__mobile-menu">

@@ -7,9 +7,9 @@ const CustomerList = ({customers, showCustomers}) => {
            return <p className="hint">There is no customer to display</p>
         }
         return ( 
-            <div className="card-container container">
+            <div className={!showCustomers ? "card-container container" : "hidden"}>
                 {customers.map((item) => (
-                    < CustomerItem  key={item.id} item={item} showCustomer={showCustomers}/>
+                    < CustomerItem  key={item.id} item={item}/>
                 ))}
             </div>
          );
