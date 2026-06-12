@@ -431,9 +431,29 @@ p {
     font-weight: 500;
     letter-spacing: 1px;
 }
+
+.form__user-role {
+    width: 48.8%;
+    height: 2.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--dark-secondary-color);
+}
+
+.form__user-role:hover {
+    cursor: pointer;
+    background-color: var(--dark-primary-color);
+}
+
 .form__button-input:hover {
     cursor: pointer;
     background-color: var(--dark-primary-color);
+}
+.form__span-color {
+    color: var(--dark-primary-color);
 }
 @media (max-width:992px) {
 

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
 
-const EmployeeItem = ({item, showEmployee}) => {
+const EmployeeItem = ({item}) => {
     return ( 
-        <div className={`card ${showEmployee && 'disabled'}`}>
+        <div className='card'>
                 <div className="card-name">
                     <p>{item.givenName}</p>
                     <p>{item.familyName}</p>

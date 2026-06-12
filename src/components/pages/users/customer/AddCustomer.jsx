@@ -45,8 +45,11 @@ const AddCustomer = ({showAddCustomer}) => {
             placeholder:'Enter your house number'
         },
     ]
+
+    const title = "Customer Registration"
+
     return ( 
-            <Form showAddCustomer={showAddCustomer}>
+            <Form showAddCustomer={showAddCustomer} title={title}>
                 <div className="form__personal-data">
                     <div className="form__headline">
                         Personal Datas
