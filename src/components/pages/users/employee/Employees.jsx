@@ -11,10 +11,10 @@ const Employees = () => {
 
     const [employees] = useState(() => {
        return UserDatas.filter(user => user.role !== 'Customer')});
-    const [showEmployee, setShowEmployee] = useState(false);
-    const [showAddEmployee, setAddShowEmployee] = useState(false);
+    const [showEmployee, setShowEmployee] = useState(true);
+    const [showAddForm, setshowAddForm] = useState(true);
     const handleClick = () => {
-        setAddShowEmployee(false);
+        setshowAddForm(true);
         if(showEmployee === true) {
             setShowEmployee(false)
         } else {
@@ -22,11 +22,11 @@ const Employees = () => {
         }
     }
     const handleAddNewEmployee = () => {
-        setShowEmployee(false);
-        if(showAddEmployee === true) {
-            setAddShowEmployee(false)
+        setShowEmployee(true);
+        if(showAddForm === true) {
+            setshowAddForm(false)
         } else {
-            setAddShowEmployee(true)
+            setshowAddForm(true)
         }
     }
     return ( 
@@ -51,7 +51,7 @@ const Employees = () => {
                     </div>
                  </div>
                 <EmployeeList employees={employees} showEmployee={showEmployee} />
-                <AddEmployee showAddEmployee={showAddEmployee} />
+                <AddEmployee showAddForm={showAddForm} />
             </main>
         </>
      );

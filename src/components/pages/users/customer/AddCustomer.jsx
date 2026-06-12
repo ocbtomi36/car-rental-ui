@@ -1,6 +1,6 @@
 import Form from "../../../shared/Form";
 import FormInput from "../../../shared/FormInput";
-const AddCustomer = ({showAddCustomer}) => {
+const AddCustomer = ({showAddForm}) => {
     const personaFileds = [
         {
             id:1,
@@ -49,7 +49,7 @@ const AddCustomer = ({showAddCustomer}) => {
     const title = "Customer Registration"
 
     return ( 
-            <Form showAddCustomer={showAddCustomer} title={title}>
+            <Form showAddForm={showAddForm} title={title}>
                 <div className="form__personal-data">
                     <div className="form__headline">
                         Personal Datas

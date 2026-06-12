@@ -1,6 +1,6 @@
-const Form = ({showAddCustomer, children, title }) => {
+const Form = ({showAddForm, children, title }) => {
     return ( 
-        <div className={!showAddCustomer ? 'customer-form ' : 'hidden'}>
+        <div className={!showAddForm ? 'customer-form ' : 'hidden'}>
             <div className="customer-form__title">{title}</div>
             <form className="form" action="">
                 <div className="form__user-details">

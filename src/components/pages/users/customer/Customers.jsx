@@ -13,9 +13,9 @@ const Customers = () => {
     }); 
 
     const [showCustomers, setShowCustomers] = useState(true);
-    const [showAddCustomer, setShowAddCustomer] = useState(true);
+    const [showAddForm, setShowAddForm] = useState(true);
     const handleClick = () => {
-        setShowAddCustomer(true)
+        setShowAddForm(true)
         if(showCustomers === true) {
             setShowCustomers(false)
         } else {
@@ -24,10 +24,10 @@ const Customers = () => {
     }
     const handleAddCustomer = () => {
         setShowCustomers(true);
-        if(showAddCustomer === true) {
-            setShowAddCustomer(false)
+        if(showAddForm === true) {
+            setShowAddForm(false)
         } else {
-            setShowAddCustomer(true)
+            setShowAddForm(true)
         }
     }
     return ( 
@@ -52,7 +52,7 @@ const Customers = () => {
                     </div>
                  </div>
                  <CustomerList customers={customers} showCustomers={showCustomers}/>
-                 <AddCustomer showAddCustomer={showAddCustomer}/>
+                 <AddCustomer showAddForm={showAddForm}/>
             </main>
         </>
      );
