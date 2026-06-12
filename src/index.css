@@ -26,6 +26,9 @@ main {
     background-color: var(--background-color);
     height: 100vh;
 }
+header {
+    height: 100vh;
+}
 
 li {
     list-style: none;
@@ -41,7 +44,6 @@ p {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 /* Utilities */
 
 .btn {
@@ -82,15 +84,16 @@ p {
 
 /* Header */
 
-.hero {
+.landing-page {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-image: url('./assets/pexels-mb-productions-2150595454-31223311.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 100vh;
     
 }
 .overlay {
@@ -367,21 +370,76 @@ p {
     text-align: center;
 }
 /* Add New Customer */
-
-
-.form__customer {
-    display: flex;
-    flex-direction: column;
-    background-image: none;
-    color: white;
-    height: 100vh;
+.customer-form {
+    max-width: 700px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem 1.9rem;
+    border-radius: 5px;
+}
+.customer-form__title {
+    color: var(--dark-primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
 }
 
+.form__headline {
+    margin-top: 16px;
+    font-size: 1.2rem;
+}
+.form__user-details {
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-primary-color);
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    gap: 1rem;
+}
+.form__personal-data {
+    width: 50%;
+}
+.form__input-box {
+    margin-bottom: 1rem;
+    width: calc(100% / 2 -20px);
+}
+.form__input {
+    height: 2.9rem;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--dark-secondary-color);
+}
+.form__details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.form__button {
+    height: 2.8rem;
+}
+.form__button-input {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-secondary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.form__button-input:hover {
+    cursor: pointer;
+    background-color: var(--dark-primary-color);
+}
 @media (max-width:992px) {
 
     /* hero */
 
-    .hero {
+    .landing-page {
         background-image: none;
         background-color: var(--background-color);
         overflow-y: scroll;
@@ -405,8 +463,6 @@ p {
 /* Tablet */
 @media (max-width:768px) {
 
-    
-
     /* navbar */
     .navbar__menu {
         display: none;
@@ -426,8 +482,24 @@ p {
         border-bottom: 3px solid var(--dark-primary-color);
         cursor:pointer;
     }
-    /* Card  */
-    
+    /* Registration  */
+    .customer-form {
+        margin-top: 5rem;
+        overflow:scroll;
+    }
+    .form__personal-data {
+        width: 60%;
+        justify-content: center;
+    }
+    .form__user-details {
+    flex-direction: column;
+    align-items: center;
+    }
+    .form__button-input {
+        width: 80%;
+        display: block;
+        margin: auto auto;
+    }
 
 }
 /* Mobil */
@@ -443,3 +515,75 @@ p {
     }
 }
 
+/*
+
+.form__header {
+    height: 20%;
+    font-size: 1.5rem;
+    color: var(--dark-primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    flex-wrap: wrap;
+    
+}
+.form__personal-data {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    width: 50%;
+    gap:1rem
+
+}
+.form__address {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    width: 50%;
+    gap:1rem
+}
+.form__item {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 1rem;
+    color: wheat;
+    gap:0.5rem;
+}
+.form__title h2 {
+    line-height: 1.6;
+    color: var(--dark-secondary-color);
+    padding: 1rem 0;
+}
+label {
+    color: var(--dark-secondary-color);
+    font-size: 1rem;
+}
+input {
+    height: 2.8rem;
+    background-color: var(--dark-primary-color);
+    border: none;
+    border-radius: 6px;
+}
+
+.form__button-submit button{
+    background-color: #0FB8C9;
+    color: var(--background-color);
+    font-weight: 300;
+    line-height: 2.5rem;
+    width: 20rem;
+    margin-top: 16px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+*/

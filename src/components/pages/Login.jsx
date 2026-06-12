@@ -2,7 +2,7 @@ import Logo from "../shared/Logo";
 
 const Login = () => {
     return (  
-        <header className="hero">
+        <header className="landing-page">
             <div className="navbar">
                 <div className="navbar__container container">
                     <Logo/>

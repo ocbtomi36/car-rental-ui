@@ -1,6 +1,6 @@
 const LoginForm = () => {
     return (  
-        <main className="hero">
+        <main className="landing-page">
         <div className="login-body">
             <div className="login-wrapper">
                 <form action="">

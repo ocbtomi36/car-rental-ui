@@ -18,7 +18,7 @@ const Vehicle = () => {
     }
     return (  
         <>
-    <header className="hero">
+    <header className="landing-page">
         <div className="navbar">
             <div className="navbar__container container">
                 <h1 className="navbar__headline-text">Vehicle Management</h1>

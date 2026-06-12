@@ -20,7 +20,7 @@ const Employees = () => {
     }
     return ( 
         <>
-            <main className="hero">
+            <main className="landing-page">
                 <div className="navbar">
                     <div className="navbar__container container">
                         <h1 className="navbar__headline-text">Employees</h1>

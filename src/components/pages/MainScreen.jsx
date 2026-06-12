@@ -9,19 +9,21 @@ const MainScreen = () => {
     
     return (  
         <>
-    <header className="hero">
+    <header className="landing-page">
        <div className="navbar">
         <div className="navbar__container container">
             <Logo/>
             <Navbar>
                     <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_self">Users</a></li>
                     <li className="navbar__menu-item"><a className="navbar__menu-link" href="./vehicle" target="_self">Vehicle</a></li>
+                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="/" target="_self">Log out</a></li>
             </Navbar>
             <div className="navbar__mobile-menu">
                 <HamburgerIcon/>
                 <MobileNavbar>
                     <li className="navbar__mobile-menu-item"><a className="navbar__mobile-menu-link" href="./users" target="_self">Users</a></li>
                     <li className="navbar__mobile-menu-item"><a className="navbar__mobile-menu-link" href="./vehicle" target="_self">Vehicle</a></li>
+                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="/" target="_self">Log out</a></li>
                 </MobileNavbar>
             </div>
         </div>

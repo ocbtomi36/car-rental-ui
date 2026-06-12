@@ -29,12 +29,10 @@ const Customers = () => {
         } else {
             setShowAddCustomer(true)
         }
-        
     }
-
     return ( 
         <>
-            <main className="hero">
+            <main className="landing-page">
                 <div className="navbar">
                     <div className="navbar__container container">
                         <h1 className="navbar__headline-text">Customers</h1>
