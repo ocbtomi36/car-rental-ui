@@ -1,5 +1,4 @@
-import { useState } from "react";
-import UserDatas from "../UserDatas"
+import { useState, useEffect } from "react";
 import Navbar from "../../../Navbar";
 import HamburgerIcon from "../../../HamburgerIcon";
 import MobileNavbar from "../../../MobileNavbar";
@@ -7,16 +6,34 @@ import CustomerList from "./CustomerList";
 import AddCustomer from "./AddCustomer";
 import { Link } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_CUSTOMERS_API_URL;
+
+/* 1. Fetch date form database */
 
 
 const Customers = () => {
 
-    const [customers] = useState(() => {
-       return UserDatas.filter(user => user.role === 'Customer');
-    }); 
-
     const [showCustomers, setShowCustomers] = useState(true);
     const [showAddForm, setShowAddForm] = useState(true);
+    const [customers, setCustomers] = useState([]);
+
+    useEffect( () => {
+
+        const fetchCustomers = async () => {
+            
+            try {
+                const res = await fetch({API_URL});
+                if(!res.ok) throw new Error('Failed to fetch data');
+                const data = await res.json();
+                console.log(data);
+                
+            } catch (err) {
+                
+            }
+
+        }
+
+    } ) 
     const handleClick = () => {
         setShowAddForm(true)
         if(showCustomers === true) {
@@ -33,6 +50,7 @@ const Customers = () => {
             setShowAddForm(true)
         }
     }
+
     return ( 
         <>
             <main className="landing-page">
