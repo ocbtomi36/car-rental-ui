@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import HamburgerIcon from '../HamburgerIcon';
 import MobileNavbar from '../MobileNavbar';
 import Navbar from '../Navbar';
@@ -14,16 +14,16 @@ const MainScreen = () => {
         <div className="navbar__container container">
             <Logo/>
             <Navbar>
-                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="./users" target="_self">Users</a></li>
-                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="./vehicle" target="_self">Vehicle</a></li>
-                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="/" target="_self">Log out</a></li>
+                    <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/users" }} target="_self">Users</Link></li>
+                    <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/vehicle" }} target="_self">Vehicle</Link></li>
+                    <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/" }} target="_self">Log out</Link></li>
             </Navbar>
             <div className="navbar__mobile-menu">
                 <HamburgerIcon/>
                 <MobileNavbar>
-                    <li className="navbar__mobile-menu-item"><a className="navbar__mobile-menu-link" href="./users" target="_self">Users</a></li>
-                    <li className="navbar__mobile-menu-item"><a className="navbar__mobile-menu-link" href="./vehicle" target="_self">Vehicle</a></li>
-                    <li className="navbar__menu-item"><a className="navbar__menu-link" href="/" target="_self">Log out</a></li>
+                    <li className="navbar__mobile-menu-item"><Link className="navbar__mobile-menu-link" to={{ pathname: "/users" }} target="_self">Users</Link></li>
+                    <li className="navbar__mobile-menu-item"><Link className="navbar__mobile-menu-link" to={{ pathname: "/vehicle" }} target="_self">Vehicle</Link></li>
+                    <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/" }} target="_self">Log out</Link></li>
                 </MobileNavbar>
             </div>
         </div>

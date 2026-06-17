@@ -6,6 +6,7 @@ import MobileNavbar from "../../../MobileNavbar";
 import EmployeeList from "./EmployeeList";
 import UserDatas from "../UserDatas";
 import AddEmployee from "../employee/AddEmployee"
+import { Link } from "react-router-dom";
 
 const Employees = () => {
 
@@ -36,16 +37,16 @@ const Employees = () => {
                     <div className="navbar__container container">
                         <h1 className="navbar__headline-text">Employees</h1>
                         <Navbar>
-                            <li className="navbar__menu-item"><a onClick={handleClick} className="navbar__menu-link">List All Employees</a></li>
-                            <li className="navbar__menu-item"><a onClick={handleAddNewEmployee} className="navbar__menu-link" target="_self">Add New Employee</a></li>
-                            <li className="navbar__menu-item"><a className="navbar__menu-link" href="/users" target="_self">Back</a></li>
+                            <li className="navbar__menu-item"><Link onClick={handleClick} className="navbar__menu-link">List All Employees</Link></li>
+                            <li className="navbar__menu-item"><Link onClick={handleAddNewEmployee} className="navbar__menu-link" target="_self">Add New Employee</Link></li>
+                            <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/users" }} target="_self">Back</Link></li>
                         </Navbar>
                         <div className="navbar__mobile-menu">
                             <HamburgerIcon />
                             <MobileNavbar>
-                                <li className="navbar__mobil-menu-item"><a onClick={handleClick} className="navbar__mobile-menu-link" target="_self" >List All Employees</a></li>
-                                <li className="navbar__mobil-menu-item"><a onClick={handleAddNewEmployee} className="navbar__mobile-menu-link" target="_self">Add New Employee</a></li>
-                                <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/users" target="_self">Back</a></li>
+                                <li className="navbar__mobil-menu-item"><Link onClick={handleClick} className="navbar__mobile-menu-link" target="_self" >List All Employees</Link></li>
+                                <li className="navbar__mobil-menu-item"><Link onClick={handleAddNewEmployee} className="navbar__mobile-menu-link" target="_self">Add New Employee</Link></li>
+                                <li className="navbar__mobil-menu-item"><Link className="navbar__mobile-menu-link" to={{ pathname: "/users" }} target="_self">Back</Link></li>
                             </MobileNavbar>
                         </div>
                     </div>

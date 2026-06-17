@@ -5,6 +5,9 @@ import HamburgerIcon from "../../../HamburgerIcon";
 import MobileNavbar from "../../../MobileNavbar";
 import CustomerList from "./CustomerList";
 import AddCustomer from "./AddCustomer";
+import { Link } from "react-router-dom";
+
+
 
 const Customers = () => {
 
@@ -39,14 +42,14 @@ const Customers = () => {
                         <Navbar>
                             <li className="navbar__menu-item"><a onClick={handleClick} className="navbar__menu-link">List All Customers</a></li>
                             <li className="navbar__menu-item"><a className="navbar__menu-link" onClick={handleAddCustomer}>Add New Customers</a></li>
-                            <li className="navbar__menu-item"><a className="navbar__menu-link" href="/users" target="_blank">Back</a></li>
+                            <li className="navbar__menu-item"><Link className="navbar__menu-link" to={{ pathname: "/users" }}>Back</Link></li>
                         </Navbar>
                         <div className="navbar__mobile-menu">
                             <HamburgerIcon />
                             <MobileNavbar>
                                 <li className="navbar__mobil-menu-item"><a onClick={handleClick} className="navbar__mobile-menu-link" >List All Customers</a></li>
                                 <li className="navbar__mobil-menu-item"><a onClick={handleAddCustomer} className="navbar__mobile-menu-link"  >Add New Customers</a></li>
-                                <li className="navbar__mobil-menu-item"><a className="navbar__mobile-menu-link" href="/users">Back</a></li>
+                                <li className="navbar__mobil-menu-item"><Link className="navbar__mobile-menu-link" to={{ pathname: "/users" }}>Back</Link></li>
                             </MobileNavbar>
                         </div>
                     </div>
