@@ -1,26 +1,9 @@
-import Login from "./components/pages/Login";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginForm from "./components/pages/LoginForm";
-import MainScreen from "./components/pages/MainScreen"
-import Users from "./components/pages/users/Users"
-import Vehicle from "./components/pages/vehicle/Vehicle";
-import Employees from "./components/pages/users/employee/Employees";
-import Customers from "./components/pages/users/customer/Customers";
+
 
 const App = () => {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Login/>} />
-          <Route path="/loginform" element={<LoginForm />} />
-          <Route path="/mainscreen" element={<MainScreen/>} />
-          <Route path="/users" element={<Users/>} />
-          <Route path="/vehicle" element={<Vehicle/>} />
-          <Route path="/employees" element={<Employees/>} />
-          <Route path="/customers" element={<Customers/>} />
-        </Routes>
-      </Router>
+     
     </>
   )
 }
