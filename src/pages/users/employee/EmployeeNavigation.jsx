@@ -9,7 +9,7 @@ const EmployeeNavigation = () => {
                 <div className="navbar__menu">
                     <ul className="navbar__menu-list">
                         <li className="navbar__menu-item"><Link className="navbar__menu-link">List All Employees</Link></li>
-                        <li className="navbar__menu-item"><Link className="navbar__menu-link" target="_self">Add New Employee</Link></li>
+                        <li className="navbar__menu-item"><Link to="new" className="navbar__menu-link" target="_self">Add New Employee</Link></li>
                     </ul>
                 </div>
                 <div className="navbar__mobile-menu">

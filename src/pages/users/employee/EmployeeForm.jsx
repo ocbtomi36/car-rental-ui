@@ -60,7 +60,7 @@ const EmployeeForm = () => {
 
     return ( 
         <div className='customer-form '>
-            <div className="customer-form__title">Bab</div>
+            <div className="customer-form__title"></div>
             <form className="form" action="">
                 <div className="form__user-details">
                     <div className="form__personal-data">
