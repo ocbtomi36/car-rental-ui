@@ -1,6 +1,8 @@
+import EmployeeForm from "./EmployeeForm";
+
 const EmployeeDetailPage = () => {
     return ( 
-        <h1>EditEmployeePage</h1>
+        <EmployeeForm />
      );
 }
  
