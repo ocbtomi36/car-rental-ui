@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const EmployeeItem = ({item}) => {
     return ( 
-        <Link className="card" to={String(item.id)}>
+        <Link className="card" to={String(item.iduser)}>
             <div className="card-name">
-                <p>{item.givenName}</p>
-                <p>{item.familyName}</p>
+                <p>{item.given_name}</p>
+                <p>{item.family_name}</p>
             </div>
-            <p>{item.role}</p>
+            <p>{item.user_role}</p>
             <p>{item.email}</p>
         </Link>
      );

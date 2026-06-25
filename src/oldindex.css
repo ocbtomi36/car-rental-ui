@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+@media (max-width:992px) {
+
+    /* hero */
+
+    .landing-page {
+        background-image: none;
+        background-color: var(--background-color);
+        overflow-y: scroll;
+    }
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    /* Card */
+    .card {
+      min-width: 400px;
+    }
+}
+
+/* Tablet */
+@media (max-width:768px) {
+
+    
+    
+    .main-content__btn:hover {
+    
+        border-bottom: 3px solid var(--dark-primary-color);
+        cursor:pointer;
+    }
+    /* Registration  */
+    .customer-form {
+        margin-top: 5rem;
+        overflow:scroll;
+    }
+    .form__personal-data {
+        width: 60%;
+        justify-content: center;
+    }
+    .form__user-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__button-input {
+        width: 80%;
+        display: block;
+        margin: auto auto;
+    }
+}
+
