@@ -1,13 +1,13 @@
-import { Form } from "react-router-dom";
+import { Form, redirect, useActionData } from "react-router-dom";
 import FormInput from "../../shared/FormImput";
 import { useState } from "react";
+import { getAuthToken } from "../../../util/auth";
 
-const EmployeeForm = ({employee}) => {
-
+const EmployeeForm = ({method,employee}) => {
+    const data = useActionData();
     employee ? employee.user_role : ''
     const [value, setValue] = useState('admin');
     function handleSelect(event) {
-        console.log(event.target.value)
         setValue(event.target.value);
     }
     const personaFileds = [
@@ -89,7 +89,10 @@ const EmployeeForm = ({employee}) => {
     return ( 
         <div className='user-form '>
             <div className="user-form__title"></div>
-            <Form className="form" method="post">
+            <Form className="form" method={method}>
+                {data && data.data && <ul>
+                   {Object.values(data.data).map(msg => <li key={msg.msg} className="warning">{msg.msg}</li>)}
+                    </ul>}
                 <div className="form__user-details">
                     <div className="form__user-data">
                         <div className="form__headline">
@@ -129,3 +132,51 @@ const EmployeeForm = ({employee}) => {
 }
  
 export default EmployeeForm;
+
+export async function action({request, params}) {
+    const method = request.method;
+    const token = getAuthToken();
+    
+    const data = await request.formData();
+    const employeeData = {
+        given_name: data.get('given_name'),
+        family_name: data.get('family_name'),
+        pin_number: data.get('pin_number'),
+        email: data.get('email'),
+        password: data.get('password'),
+        locality_name: data.get('locality_name'),
+        postal_code: data.get('postal_code'),
+        street_name: data.get('street_name'),
+        street_type: data.get('street_type'),
+        house_number: data.get('house_number'),
+        user_role: data.get('user_role'),
+        phone_number: data.get('phone_number')
+    }
+    let url;
+
+    if(method === "POST") {
+        url = 'http://localhost:4000/auth/signup'
+    } else if (method === "PUT") {
+        const id = params.employeeId;
+        url = `http://localhost:4000/users/employee/${id}`
+    }
+    
+    const response = await fetch(url, {
+        method: method,
+        headers: {
+                'Content-Type' : 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+        body: JSON.stringify(employeeData)
+    })
+
+    if(response.status === 422 ) {
+        return response;
+    }
+    if(!response) {
+         throw new Response(JSON.stringify({ message: 'Could not save employees.'}), {status: 500})
+    } 
+
+    return redirect('/employees');
+
+}

@@ -7,7 +7,7 @@ const EmployeeDetailPage = () => {
     return ( 
 
         <>
-            <EmployeeForm employee={employee}/>
+            <EmployeeForm method="PUT" employee={employee}/>
         </>
      );
 }
