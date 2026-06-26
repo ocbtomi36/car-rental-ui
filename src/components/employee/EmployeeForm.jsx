@@ -4,37 +4,46 @@ import { useState } from "react";
 
 const EmployeeForm = ({employee}) => {
 
-    const [position, setPosition] = useState(employee.user_role);
-    console.log(position);
+    employee ? employee.user_role : ''
+    const [value, setValue] = useState('admin');
+    function handleSelect(event) {
+        console.log(event.target.value)
+        setValue(event.target.value);
+    }
     const personaFileds = [
         {
             id:1,
             label:'Given Name',
             placeholder:'Enter your given name',
+            name:'given_name',
             value: employee?.given_name || ''
         },
         {
             id:2,
             label:'Family Name',
             placeholder:'Enter your family name',
+            name:'family_name',
             value: employee?.family_name || ''
         },
         {
             id:3,
             label:'Pin Number',
             placeholder:'Enter your pin number',
+            name:'pin_number',
             value: employee?.pin_number || ''
         },
         {
             id:4,
             label:'Email',
             placeholder:'Enter your email address',
+            name:'email',
             value: employee?.email || ''
         },
         {
             id:5,
             label:'Password',
             placeholder:'Enter your password',
+            name: 'password',
             value: ''
         },
     ]
@@ -43,30 +52,35 @@ const EmployeeForm = ({employee}) => {
             id:1,
             label:'Locality',
             placeholder:'Enter your locality name',
+            name: 'locality_name',
             value: employee?.locality_name || ''
         },
         {
             id:2,
             label:'Postal Code',
             placeholder:'Enter your postal code',
+            name: 'postal_code',
             value: employee?.postal_code || ''
         },
         {
             id:3,
             label:'Street Name',
             placeholder:'Enter your street name',
+            name: 'street_name',
             value: employee?.street_name || ''
         },
         {
             id:4,
             label:'Street Type',
             placeholder:'Enter street type',
+            name: 'street_type',
             value: employee?.street_type || ''
         },
         {
             id:5,
             label:'House Number',
             placeholder:'Enter your house number',
+            name: 'house_number',
             value: employee?.house_number || ''
         },
     ]
@@ -75,14 +89,14 @@ const EmployeeForm = ({employee}) => {
     return ( 
         <div className='user-form '>
             <div className="user-form__title"></div>
-            <Form className="form" action="">
+            <Form className="form" method="post">
                 <div className="form__user-details">
                     <div className="form__user-data">
                         <div className="form__headline">
                             Personal Datas
                         </div>
                         {personaFileds.map(field => (
-                            <FormInput key={field.id} label={field.label} placeholder={field.placeholder} defaultValue={field.value}/>
+                            <FormInput key={field.id} label={field.label} name={field.name} placeholder={field.placeholder} defaultValue={field.value}/>
                         ))}
                     </div>
                 
@@ -91,18 +105,19 @@ const EmployeeForm = ({employee}) => {
                             Address
                         </div>
                         {addressFileds.map(field => (
-                            <FormInput key={field.id} label={field.label} placeholder={field.placeholder} defaultValue={field.value}/>
+                            <FormInput key={field.id} label={field.label} name={field.name} placeholder={field.placeholder} defaultValue={field.value}/>
                         ))}
                     </div>
                     <div className="form__user-data">
                         <div className="form__headline">
                             Position 
                         </div>
-                        <select className='form__user-role' value={position} >
+                        <select name="user_role" className='form__user-role' onChange={handleSelect} value={value}>
                             <option value="employee">Employee</option>
                             <option value="manager">Manager</option>
                             <option value="admin" >Admin</option>
                         </select>
+                            <FormInput label={'Phone Number'} name={'phone_number'} placeholder={'Enter your phone number'} />
                     </div> 
                 </div>
                 <div className="form__button">

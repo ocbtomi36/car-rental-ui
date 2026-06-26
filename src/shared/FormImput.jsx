@@ -1,8 +1,8 @@
-const FormInput = ({ label, placeholder,defaultValue}) => {
+const FormInput = ({ label, name,placeholder,defaultValue}) => {
     return (  
         <div className="form__input-box">
             <label className="form__details">{label}</label>
-            <input type="text" className="form__input" placeholder={placeholder} required defaultValue={defaultValue}/>
+            <input type={name === 'password' ? 'password' : name === 'email' ? 'email' : 'text'} className="form__input" name={name} placeholder={placeholder} required defaultValue={defaultValue}/>
         </div>
 
     );

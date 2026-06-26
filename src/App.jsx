@@ -3,7 +3,7 @@ import HomePage from './pages/Home';
 import EmployeesPage, {loader as employeeLoader} from './pages/users/employee/Employees'
 import EmployeeDetailPage, {loader as employeeDetailLoader} from './pages/users/employee/EmployeeDetail'
 import EditEmployeePage from './pages/users/employee/EditEmployee'
-import NewEmployeePage from "./pages/users/employee/NewEmployee";
+import NewEmployeePage ,{ action as newEmployeeAction} from "./pages/users/employee/NewEmployee";
 import RootLayout from "./pages/Root";
 import EmployeeLayout from "./pages/users/employee/EmployeeRoot"
 import AuthenticationPage, { action as authAction } from "./pages/Authentication";
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             { path: 'edit', element: <EditEmployeePage /> },
           ]
         },
-        { path: 'new', element: <NewEmployeePage /> },
+        { path: 'new', element: <NewEmployeePage />, action: newEmployeeAction},
       ]}
     ]
    },
