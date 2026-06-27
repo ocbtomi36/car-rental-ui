@@ -1,16 +1,17 @@
 import { getAuthToken } from "../../../../util/auth";
 import UserDatas from "../UserDatas";
-import EmployeeList from '../../../components/employee/EmployeeList';
+import UserList from "../../../components/UserList"
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import EmployeeNavigation from "../../../components/SubNavigation";
 
 const EmployeesPage = () => {
 
-    const employees = useLoaderData();
+    const users = useLoaderData();
+    const entity = 'employee'
     return ( 
         <>
-            <EmployeeList employees={employees} />
+            <UserList users={users} entity={entity}/>
         </>
      );
 }

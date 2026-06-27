@@ -1,14 +1,14 @@
 import EmployeeItem from './EmployeeItem';
 
 
-const EmployeeList = ({employees}) => {
+const EmployeeList = ({users, entity}) => {
 
-     if(!employees || employees.length === 0) {
-       return <p className="hint">There is no employee to display</p>
+     if(!users || users.length === 0) {
+       return <p className="hint">There is no {entity} to display</p>
     }
     return ( 
         <div className='card-container container' >
-            {employees.map((item) => (
+            {users.map((item) => (
                 < EmployeeItem  key={item.iduser} item={item} />
             ))}
         </div>

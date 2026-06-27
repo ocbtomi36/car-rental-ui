@@ -129,7 +129,7 @@ const EmployeeForm = ({method,employee}) => {
                         <input className="form__button-input" type="submit" value={"Submit"}/>
                     </div>
                     <div className="form__button">
-                        <input className="form__button-input" type="submit" value={employee.is_employed === 'yes' ? "Deactivate" : "Reactivate"}/>
+                        <input className="form__button-input" type="submit" value={"Reactivate"}/>
                     </div>
                 </div>
             </Form> 

@@ -12,6 +12,8 @@ import {action as manipulateEmployeeAction} from './components/employee/Employee
 import {action as logoutAction} from './pages/Logout'
 import { tokenLoader } from '../util/auth'
 import CustomerLayout from "./pages/users/customer/CustomerRoot";
+import CustomerPage from "./pages/users/customer/Customers";
+import { element } from "prop-types";
 
 const router = createBrowserRouter([
   { path: '/', 
@@ -31,7 +33,10 @@ const router = createBrowserRouter([
       },
       {
         path:'customers',
-        element:<CustomerLayout/>
+        element:<CustomerLayout/>,
+        children: [
+          {index: true, element: <CustomerPage />}
+        ]
       },
       { path: 'employees', 
         element: <EmployeeLayout />,
