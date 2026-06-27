@@ -6,6 +6,7 @@ const CustomerRootLayout = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const navbarHeadlineText = "Customer Management";
+    const menuItems = [];
     const handleClick = () => {
                 setMenuOpen(prev => !prev);
     }

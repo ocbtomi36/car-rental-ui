@@ -11,7 +11,7 @@ const MainNavigation = ({handleClick , isMainMobileMenuOpen }) => {
         <>
            <div className="navbar">
             <div className="navbar__container">
-                <div className="navbar__logo">
+                 <div className="navbar__logo">
                     <h1 className="navbar__logo-text secondary"><span className="car">C</span>ar<span className="rent">Rent</span><span className="and">&</span><span className="trade">T</span><span className="rade">rade</span></h1>
                 </div>
                 <div className="navbar__menu">
@@ -49,36 +49,3 @@ const MainNavigation = ({handleClick , isMainMobileMenuOpen }) => {
 }
  
 export default MainNavigation;
-
-/**
-
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-
-.navbar__menu-item {
-    display: block;
-    text-align: center;
-    font-size: 1.3rem;
-}
-
-
-.navbar__menu-link.active{
-    color: var(--dark-secondary-color);
-    border-bottom: 1.5px solid var(--dark-primary-color);
-    padding-bottom: 0.5rem;
-}
-
-
-
-
- */
