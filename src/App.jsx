@@ -9,16 +9,29 @@ import EmployeeLayout from "./pages/users/employee/EmployeeRoot"
 import AuthenticationPage, { action as authAction } from "./pages/Authentication";
 import ErrorPage from "./pages/Error";
 import {action as manipulateEmployeeAction} from './components/employee/EmployeeForm'
+import {action as logoutAction} from './pages/Logout'
+import { tokenLoader } from '../util/auth'
+import CustomerLayout from "./pages/users/customer/CustomerRoot";
 
 const router = createBrowserRouter([
   { path: '/', 
     element: <RootLayout />,
     errorElement: <ErrorPage />,
+    loader: tokenLoader,
+    id:'root',
     children: [
       { index: true, element: <HomePage /> },
       {path: 'auth', 
         element: <AuthenticationPage />,
         action: authAction
+      },
+      {
+        path:'logout',
+        action:logoutAction
+      },
+      {
+        path:'customers',
+        element:<CustomerLayout/>
       },
       { path: 'employees', 
         element: <EmployeeLayout />,

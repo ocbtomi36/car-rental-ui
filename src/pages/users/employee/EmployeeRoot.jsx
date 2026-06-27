@@ -1,17 +1,18 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import EmployeeNavigation from "../../../components/employee/EmployeeNavigation";
+import SubNavigation from "../../../components/SubNavigation";
 
 const EmployeeRootLayout = () => {
 
-     const [employeeMenuOpen, setEmpmolyeeMenuOpen] = useState(false);
+    const navbarHeadlineText = "Employee Management"
+    const [menuOpen, setMenuOpen] = useState(false);
     const handleClick = () => {
-                setEmpmolyeeMenuOpen(prev => !prev);
+                setMenuOpen(prev => !prev);
     }
 
     return (
         <> 
-            <EmployeeNavigation handleClick={handleClick} employeeMenuOpen={employeeMenuOpen} />
+            <SubNavigation handleClick={handleClick} menuOpen={menuOpen} navbarHeadlineText={navbarHeadlineText} />
             <Outlet />
         </> 
      );

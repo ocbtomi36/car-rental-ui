@@ -1,7 +1,7 @@
 import { useParams, useRouteLoaderData } from "react-router-dom";
 import { getAuthToken } from "../../../../util/auth";
 import { Link } from "react-router-dom";
-import EmployeeNavigation from "../../../components/employee/EmployeeNavigation";
+import EmployeeNavigation from "../../../components/SubNavigation";
 const EmployeeDetailPage = () => {
 
     const param = useParams();
@@ -30,6 +30,10 @@ const EmployeeDetailPage = () => {
             <div className="card-detail__data-item">
                 <h4>Email:</h4>
                 <p className="card-detail__data-text">{data.email}</p>
+            </div>
+            <div className="card-detail__data-item">
+                <h4>Is Employed </h4>
+                <p className="card-detail__data-text">{data.is_employed}</p>
             </div>
             <div className="card-detail__data-item">
                 <h4>Locality:</h4>

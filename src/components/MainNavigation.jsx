@@ -2,10 +2,11 @@ import Logo from '../shared/Logo';
 import HamburgerIcon from '../shared/HamburgerIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, Form, useRouteLoaderData } from 'react-router-dom';
 
 
 const MainNavigation = ({handleClick , isMainMobileMenuOpen }) => {
+    const token = useRouteLoaderData('root');
     return ( 
         <>
            <div className="navbar">
@@ -15,10 +16,19 @@ const MainNavigation = ({handleClick , isMainMobileMenuOpen }) => {
                 </div>
                 <div className="navbar__menu">
                     <ul className="navbar__menu-list">
-                        <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/employees" target="_self">Employees</NavLink></li>
-                        <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/customers" target="_self">Customers</NavLink></li>
-                        <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/vehicle" target="_self">Vehicle</NavLink></li>
-                        <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/"target="_self">Home</NavLink></li>
+                        {token && (
+                            <>
+                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/employees" target="_self">Employees</NavLink></li>
+                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/customers" target="_self">Customers</NavLink></li>
+                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/vehicle" target="_self">Vehicle</NavLink></li>
+                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/"target="_self">Home</NavLink></li>
+                                <li>
+                                    <Form action='/logout' method='post'>
+                                        <button className='navbar__logout-btn'>Logout</button>
+                                    </Form>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 </div>
                 <div className="navbar__mobile-menu">

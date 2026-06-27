@@ -5,7 +5,6 @@ import { getAuthToken } from "../../../util/auth";
 
 const EmployeeForm = ({method,employee}) => {
     const data = useActionData();
-    employee ? employee.user_role : ''
     const [value, setValue] = useState('admin');
     function handleSelect(event) {
         setValue(event.target.value);
@@ -93,6 +92,8 @@ const EmployeeForm = ({method,employee}) => {
                 {data && data.data && <ul>
                    {Object.values(data.data).map(msg => <li key={msg.msg} className="warning">{msg.msg}</li>)}
                     </ul>}
+                {data && data.message && 
+                <h2 className="warning-red">{data.message}</h2>}
                 <div className="form__user-details">
                     <div className="form__user-data">
                         <div className="form__headline">
@@ -120,11 +121,16 @@ const EmployeeForm = ({method,employee}) => {
                             <option value="manager">Manager</option>
                             <option value="admin" >Admin</option>
                         </select>
-                            <FormInput label={'Phone Number'} name={'phone_number'} placeholder={'Enter your phone number'} />
+                            <FormInput label={'Phone Number'} name={'phone_number'} placeholder={'Enter your phone number'} required defaultValue={employee?.phone_number || ''}/>
                     </div> 
                 </div>
-                <div className="form__button">
-                    <input className="form__button-input" type="submit" value={"Send"}/>
+                <div className="form__buttons">
+                    <div className="form__button">
+                        <input className="form__button-input" type="submit" value={"Submit"}/>
+                    </div>
+                    <div className="form__button">
+                        <input className="form__button-input" type="submit" value={employee.is_employed === 'yes' ? "Deactivate" : "Reactivate"}/>
+                    </div>
                 </div>
             </Form> 
         </div>
@@ -152,6 +158,9 @@ export async function action({request, params}) {
         user_role: data.get('user_role'),
         phone_number: data.get('phone_number')
     }
+    const isEmployed = data.get('is_employed');
+
+
     let url;
 
     if(method === "POST") {
@@ -160,7 +169,6 @@ export async function action({request, params}) {
         const id = params.employeeId;
         url = `http://localhost:4000/users/employee/${id}`
     }
-    
     const response = await fetch(url, {
         method: method,
         headers: {
@@ -170,7 +178,7 @@ export async function action({request, params}) {
         body: JSON.stringify(employeeData)
     })
 
-    if(response.status === 422 ) {
+    if(response.status === 422 || 409 ) {
         return response;
     }
     if(!response) {
