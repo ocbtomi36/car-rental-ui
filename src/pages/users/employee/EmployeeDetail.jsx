@@ -2,11 +2,25 @@ import { useParams, useRouteLoaderData } from "react-router-dom";
 import { getAuthToken } from "../../../../util/auth";
 import { Link } from "react-router-dom";
 import EmployeeNavigation from "../../../components/SubNavigation";
+import DetailItem from "../../../components/DetailItem";
 const EmployeeDetailPage = () => {
 
     const param = useParams();
     const id = param.employeeId;
     const data = useRouteLoaderData('employee-detail');
+
+    const detailItems = [
+    { label: 'Given Name', value: data.given_name},
+    { label: 'Family Name', value: data.family_name },
+    { label: 'Pin Number', value: data.pin_number },
+    { label: 'Email', value: data.email },
+    { label: 'Is Employed', value: data.is_employed },
+    { label: 'Locality', value: data.locality_name },
+    { label: 'Postal Code', value: data.postal_code },
+    { label: 'Street Name', value: data.street_name },
+    { label: 'Street Type', value: data.street_type },
+    { label: 'House Number', value: data.house_number }
+    ];
 
 
     return ( 
@@ -15,46 +29,11 @@ const EmployeeDetailPage = () => {
             <h2>Personal Datas</h2>
         </div>
         <div className="card-detail__data">
-            <div className="card-detail__data-item">
-                <h4>Given Name:</h4>
-                <p className="card-detail__data-text">{data.given_name}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Family Name:</h4>        
-                <p className="card-detail__data-text">{data.family_name}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Pin Number:</h4>
-                <p className="card-detail__data-text">{data.pin_number}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Email:</h4>
-                <p className="card-detail__data-text">{data.email}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Is Employed </h4>
-                <p className="card-detail__data-text">{data.is_employed}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Locality:</h4>
-                <p className="card-detail__data-text">{data.locality_name}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Postal Code:</h4>
-                <p className="card-detail__data-text">{data.postal_code}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Street Name:</h4>
-                <p className="card-detail__data-text">{data.street_name}</p>
-            </div>
-            <div className="card-detail__data-item">
-                <h4>Street Type:</h4>
-                <p className="card-detail__data-text">{data.street_type}</p>    
-            </div>
-            <div className="card-detail__data-item">
-                <h4>House Number:</h4>
-                <p className="card-detail__data-text">{data.house_number}</p>
-            </div>
+            
+            {detailItems.map((item) => (
+                <DetailItem label={item.label} data={item.value}/>
+            ))}
+            
         </div>
         <Link to="edit" className="card-detail__btn btn"><p>Edit</p></Link>
        </article>
@@ -73,7 +52,7 @@ export async function loader({request, params}) {
             }
         });
         if(!response.ok) {
-             throw new Response(JSON.stringify({ message: 'Could not fetch details for selected employee.'}), {status: 500})
+             throw new Response(JSON.stringify({ message: 'Could not a fetch details for selected employee.'}), {status: 500})
         } else {
             const resData = await response.json();
             return resData.data;

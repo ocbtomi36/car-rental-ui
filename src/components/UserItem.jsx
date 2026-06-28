@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const EmployeeItem = ({item}) => {
+const UserItem = ({item}) => {
     return ( 
         <Link className="card" to={String(item.iduser)}>
             <div className="card-name">
@@ -8,10 +8,8 @@ const EmployeeItem = ({item}) => {
                 <p>{item.family_name}</p>
             </div>
             <p>{item.user_role}</p>
-            <p>{item.email}</p>
+            <p> {item.email ? item.email : item.pin_number} </p>
         </Link>
      );
 }
-
-
-export default EmployeeItem;
+export default UserItem;

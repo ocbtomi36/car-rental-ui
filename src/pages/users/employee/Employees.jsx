@@ -1,9 +1,7 @@
 import { getAuthToken } from "../../../../util/auth";
-import UserDatas from "../UserDatas";
 import UserList from "../../../components/UserList"
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import EmployeeNavigation from "../../../components/SubNavigation";
 
 const EmployeesPage = () => {
 

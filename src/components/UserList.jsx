@@ -1,7 +1,7 @@
-import EmployeeItem from './EmployeeItem';
+import UserItem from './UserItem';
 
 
-const EmployeeList = ({users, entity}) => {
+const UserList = ({users, entity}) => {
 
      if(!users || users.length === 0) {
        return <p className="hint">There is no {entity} to display</p>
@@ -9,10 +9,10 @@ const EmployeeList = ({users, entity}) => {
     return ( 
         <div className='card-container container' >
             {users.map((item) => (
-                < EmployeeItem  key={item.iduser} item={item} />
+                < UserItem  key={item.iduser} item={item} />
             ))}
         </div>
      );
 }
  
-export default EmployeeList;
+export default UserList;

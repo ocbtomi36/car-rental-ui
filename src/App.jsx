@@ -12,7 +12,8 @@ import {action as manipulateEmployeeAction} from './components/employee/Employee
 import {action as logoutAction} from './pages/Logout'
 import { tokenLoader } from '../util/auth'
 import CustomerLayout from "./pages/users/customer/CustomerRoot";
-import CustomerPage from "./pages/users/customer/Customers";
+import CustomerPage, {loader as customerLoader} from "./pages/users/customer/Customers";
+import CustomerDetailPage, {loader as customerDetailLoader} from "./pages/users/customer/CustomerDetail";
 import { element } from "prop-types";
 
 const router = createBrowserRouter([
@@ -35,7 +36,15 @@ const router = createBrowserRouter([
         path:'customers',
         element:<CustomerLayout/>,
         children: [
-          {index: true, element: <CustomerPage />}
+          {index: true, element: <CustomerPage />, loader: customerLoader },
+          {
+            path: ':customerId',
+            id: 'customer-detail',
+            loader: customerDetailLoader,
+            children: [
+              { index: true, element: <CustomerDetailPage />}
+            ]
+          }
         ]
       },
       { path: 'employees', 
