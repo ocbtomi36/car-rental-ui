@@ -14,6 +14,7 @@ import { tokenLoader } from '../util/auth'
 import CustomerLayout from "./pages/users/customer/CustomerRoot";
 import CustomerPage, {loader as customerLoader} from "./pages/users/customer/Customers";
 import CustomerDetailPage, {loader as customerDetailLoader} from "./pages/users/customer/CustomerDetail";
+import EditCustomerPage from './pages/users/customer/EditCustomer'
 import { element } from "prop-types";
 
 const router = createBrowserRouter([
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
             id: 'customer-detail',
             loader: customerDetailLoader,
             children: [
-              { index: true, element: <CustomerDetailPage />}
+              { index: true, element: <CustomerDetailPage />},
+              { path: 'edit', element: <EditCustomerPage />}
             ]
           }
         ]
