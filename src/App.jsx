@@ -9,12 +9,14 @@ import EmployeeLayout from "./pages/users/employee/EmployeeRoot"
 import AuthenticationPage, { action as authAction } from "./pages/Authentication";
 import ErrorPage from "./pages/Error";
 import {action as manipulateEmployeeAction} from './components/employee/EmployeeForm'
+import {action as manipulateCustomerAction} from './components/customer/CustomerForm'
 import {action as logoutAction} from './pages/Logout'
 import { tokenLoader } from '../util/auth'
 import CustomerLayout from "./pages/users/customer/CustomerRoot";
 import CustomerPage, {loader as customerLoader} from "./pages/users/customer/Customers";
 import CustomerDetailPage, {loader as customerDetailLoader} from "./pages/users/customer/CustomerDetail";
 import EditCustomerPage from './pages/users/customer/EditCustomer'
+import NewCustomerPage from './pages/users/customer/NewCustomer'
 import { element } from "prop-types";
 
 const router = createBrowserRouter([
@@ -44,8 +46,11 @@ const router = createBrowserRouter([
             loader: customerDetailLoader,
             children: [
               { index: true, element: <CustomerDetailPage />},
-              { path: 'edit', element: <EditCustomerPage />}
+              { path: 'edit', element: <EditCustomerPage />, action: manipulateCustomerAction}
             ]
+          },
+          {
+            path:'new', element: <NewCustomerPage />, action: manipulateCustomerAction
           }
         ]
       },

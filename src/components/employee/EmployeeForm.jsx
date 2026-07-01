@@ -178,7 +178,7 @@ export async function action({request, params}) {
         body: JSON.stringify(employeeData)
     })
 
-    if(response.status === 422 || 409 ) {
+    if(response.status === 422 || response.status === 409 ) {
         return response;
     }
     if(!response) {

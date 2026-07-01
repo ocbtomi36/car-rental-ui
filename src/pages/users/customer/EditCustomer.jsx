@@ -2,7 +2,7 @@ import CustomerForm from "../../../components/customer/CustomerForm";
 import { useRouteLoaderData } from "react-router-dom";
 const CustomerDetailPage = () => {
 
-    const customer = useRouteLoaderData('employee-detail');
+    const customer = useRouteLoaderData('customer-detail');
 
     return ( 
 
