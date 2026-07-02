@@ -20,7 +20,7 @@ const MainNavigation = ({handleClick , isMainMobileMenuOpen }) => {
                             <>
                                 <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/employees" target="_self">Employees</NavLink></li>
                                 <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/customers" target="_self">Customers</NavLink></li>
-                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/vehicle" target="_self">Vehicle</NavLink></li>
+                                <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/vehicles" target="_self">Vehicle</NavLink></li>
                                 <li className="navbar__menu-item"><NavLink className={({isActive}) => isActive ? 'navbar__menu-link active' : 'navbar__menu-link' } to="/"target="_self">Home</NavLink></li>
                                 <li>
                                     <Form action='/logout' method='post'>

@@ -5,8 +5,6 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--text-color) !important;
 }
 
-
-
 *{
     margin: 0px;
     padding: 0px;
@@ -247,40 +245,74 @@ p {
 /* Content Styling */
 
 /* Card */
-
 .card-container {
+    padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
-    border: #0FB8C9;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 80%;
     width: 100%;
 }
-
-
 .card {
-    width: 30%;
-    background-color:var(--background-color);
-    border: 1px solid var(--dark-secondary-color);
-    border-radius: 10px;
-    margin: 1rem;
+    background-color:  rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16rem;
+    height: 19rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
 }
-
-.card p {
-    display: block;
+.card:hover {
+    border: 1px solid var(--dark-secondary-color);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.card__headline {
+    display: flex;
+    width: 100%;
+    height: 20%;
     text-align: center;
-    font-size: 0.8rem;
+    margin-bottom: 10px;
+    align-items:end;
     color: var(--dark-primary-color);
 }
-.card-name{
-    width: 100%;
+.card__list {
+    height: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
 }
 
+.card_headline-text{
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    
+}
+.card__label {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+.card__label-title {
+    padding-left: 10px;
+    width: 50%;
+    font-size: 1.4rem;
+    color: var(--dark-primary-color);
+}
+.card__data-container {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.card__data {
+    font-size: 16px;
+    text-align: center;
+    width: 40%;
+    color: var(--dark-secondary-color);
+}
 /* User detail card */
 .card-detail {
     margin-top: 5rem;
@@ -348,7 +380,8 @@ p {
    border-bottom: 2px solid var(--dark-secondary-color);
 }
 
-/* Add New User */
+
+/* Add New User Form*/
 
 .user-form {
     margin: auto;

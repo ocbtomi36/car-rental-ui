@@ -18,6 +18,8 @@ import CustomerDetailPage, {loader as customerDetailLoader} from "./pages/users/
 import EditCustomerPage from './pages/users/customer/EditCustomer'
 import NewCustomerPage from './pages/users/customer/NewCustomer'
 import { element } from "prop-types";
+import VehicleLayout from "./pages/vehicle/VehicleRoot";
+import VehiclePage, {loader as vehicleLoader} from "./pages/vehicle/Vehicle";
 
 const router = createBrowserRouter([
   { path: '/', 
@@ -68,7 +70,14 @@ const router = createBrowserRouter([
           ]
         },
         { path: 'new', element: <NewEmployeePage />, action: manipulateEmployeeAction},
-      ]}
+      ]},
+      {
+        path: 'vehicles',
+        element: <VehicleLayout />,
+        children: [
+          {index: true, element: <VehiclePage />, loader:vehicleLoader}
+        ]
+      }
     ]
    },
   
