@@ -1,11 +1,14 @@
-import VehicleItem from "./VehilcleItem";
+import VehicleItem from "./VehicleItem";
 
 const VehicleList = ({vehicles}) => {
+
     return ( 
         <>
-           {vehicles.map((vehicle) => (
-            <VehicleItem key={vehicle.idcar} vehicle={vehicle}/>
+         <div className='card-container container' >
+           {vehicles.map((item) => (
+            <VehicleItem key={item.idcar} item={item}/>
            ))}
+         </div>
         </>
      );
 }

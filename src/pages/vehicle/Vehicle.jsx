@@ -6,7 +6,6 @@ const VehiclePage = () => {
 
     const entity = 'vehicle'
     const vehicles = useLoaderData();
-    console.log(vehicles)
 
     return ( 
         <>

@@ -10,6 +10,7 @@ import AuthenticationPage, { action as authAction } from "./pages/Authentication
 import ErrorPage from "./pages/Error";
 import {action as manipulateEmployeeAction} from './components/employee/EmployeeForm'
 import {action as manipulateCustomerAction} from './components/customer/CustomerForm'
+import {action as manipulateVehicleAction} from './components/vehicle/VehicleForm'
 import {action as logoutAction} from './pages/Logout'
 import { tokenLoader } from '../util/auth'
 import CustomerLayout from "./pages/users/customer/CustomerRoot";
@@ -20,6 +21,11 @@ import NewCustomerPage from './pages/users/customer/NewCustomer'
 import { element } from "prop-types";
 import VehicleLayout from "./pages/vehicle/VehicleRoot";
 import VehiclePage, {loader as vehicleLoader} from "./pages/vehicle/Vehicle";
+import VehicleDetailPage, {loader as vehicleDetailLoader} from "./pages/vehicle/VehicleDetail";
+import EditVehiclePage from "./pages/vehicle/EditVehicle";
+import NewVehiclePage from "./pages/vehicle/NewVehicle";
+import LocationLayout from "./pages/location/LocationRoot";
+import LocationPage from "./pages/location/Location";
 
 const router = createBrowserRouter([
   { path: '/', 
@@ -75,7 +81,26 @@ const router = createBrowserRouter([
         path: 'vehicles',
         element: <VehicleLayout />,
         children: [
-          {index: true, element: <VehiclePage />, loader:vehicleLoader}
+          {index: true, element: <VehiclePage />, loader:vehicleLoader},
+          {
+            path: ':idcar',
+            loader: vehicleDetailLoader,
+            id: 'vehicle-detail',
+            children: [
+              {index: true, element: <VehicleDetailPage />},
+              {path: 'edit', element: <EditVehiclePage />, action: manipulateVehicleAction}
+            ]
+          },
+          {
+            path:'new', element: <NewVehiclePage />, action: manipulateVehicleAction
+          }
+        ]
+      },
+      {
+        path: 'locations',
+        element: < LocationLayout />,
+        children: [
+          {index: true, element: <LocationPage />}
         ]
       }
     ]
