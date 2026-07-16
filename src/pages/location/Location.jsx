@@ -1,4 +1,4 @@
-import LocationList from "../../components/location/LoationList";
+import LocationList from "../../components/location/LocationList";
 import { getAuthToken } from "../../../util/auth"
 import { useLoaderData } from "react-router-dom";
 
