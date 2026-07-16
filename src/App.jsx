@@ -25,7 +25,7 @@ import VehicleDetailPage, {loader as vehicleDetailLoader} from "./pages/vehicle/
 import EditVehiclePage from "./pages/vehicle/EditVehicle";
 import NewVehiclePage from "./pages/vehicle/NewVehicle";
 import LocationLayout from "./pages/location/LocationRoot";
-import LocationPage from "./pages/location/Location";
+import LocationPage, {loader as locationLoader} from "./pages/location/Location";
 
 const router = createBrowserRouter([
   { path: '/', 
@@ -100,7 +100,7 @@ const router = createBrowserRouter([
         path: 'locations',
         element: < LocationLayout />,
         children: [
-          {index: true, element: <LocationPage />}
+          {index: true, element: <LocationPage />, loader:locationLoader}
         ]
       }
     ]

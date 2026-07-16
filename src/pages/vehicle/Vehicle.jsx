@@ -1,4 +1,4 @@
-import VehicleList from "../../components/vehicle/VehicleLisct";
+import VehicleList from "../../components/vehicle/VehicleList";
 import { getAuthToken } from "../../../util/auth";
 import { useLoaderData } from "react-router-dom";
 
