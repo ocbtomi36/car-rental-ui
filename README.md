@@ -5,6 +5,8 @@
 
 This project is a React-based user interface that communicates with a RESTful API backend.
 
+![image alt](https://github.com/ocbtomi36/car-rental-ui/blob/0e0979ed4102c92a60e51d454b3e6108a0464ea2/screenshotSml.jpg)
+
 [Backend Repository Link](https://github.com/ocbtomi36/car-rental-diploma-project.git)
 ---
 
