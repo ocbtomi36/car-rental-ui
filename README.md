@@ -41,8 +41,8 @@ This is an independently developed project.
 ### 6.1 Prerequisites
 
  * Node.js version 17 or higher
- * MySQL Server 8.0+ or MariaDB 10.5+
- * MySQL Workbench 8.0 CE (recommended graphical client)
+ * Webbrowser of your choice, recommended firefox
+ * Running backend (url see chapter 1)
  * Git or another Git-compatible version control tool
 
 ### 6.2 How to get the project
@@ -50,11 +50,11 @@ This is an independently developed project.
 1. Clone the repository on your local machine
 
 ```bash
-HTTPS: https://github.com/ocbtomi36/car-rental-diploma-project.git 
+HTTPS: https://github.com/ocbtomi36/car-rental-ui.git
 ```
 or 
 ```bash
-GitHub_CLI: gh repo clone ocbtomi36/car-rental-diploma-project
+GitHub_CLI: gh repo clone ocbtomi36/car-rental-ui
 ```
 
 2. Open the project terminal and run: 
@@ -64,23 +64,19 @@ GitHub_CLI: gh repo clone ocbtomi36/car-rental-diploma-project
 ```
 With that command you install all necessary packages.
 
-3. Import `.sql ` file from `db_dump` folder into supported DBMS.
-
 ### 6.3 Start the project
 
 1. Create an ` .env ` file and use the variables names. List you can find section 5.
 
 2. To run the program
 
+Before program starts, you need a running backend on your computer.
+
 Go to your project terminal and run command:
 
 ```bash
     npm start
 ```
-
-For this demo project, a predefined JWT secret is used to simplify local setup.
-
-In a production environment, the JWT secret must be stored securely and should not be shared.
 
 3. Set this ` newsomesupersecretsecret ` as jwt_password.
 
