@@ -4,9 +4,11 @@
 ## 1. About the project
 
 This project is a React-based user interface that communicates with a RESTful API backend.
+By running this application, you will get an interface similar to the design shown below.
 
-![image alt](https://github.com/ocbtomi36/car-rental-ui/blob/0e0979ed4102c92a60e51d454b3e6108a0464ea2/screenshotSml.jpg)
+![Car Rental UI Screenshot](https://github.com/ocbtomi36/car-rental-ui/blob/0e0979ed4102c92a60e51d454b3e6108a0464ea2/screenshotSml.jpg)
 
+The user interface cannot work without the backend service. Before running this application, you need to install and configure backend and database.
 [Backend Repository Link](https://github.com/ocbtomi36/car-rental-diploma-project.git)
 ---
 
@@ -28,24 +30,17 @@ This is an independently developed project.
  * Role-based authentication for protected API routes
  * CRUD operations for each entity
 
-## 5. Necessary Environment Variables
-    PORT
-    HOST    
-    USER
-    PASSWORD
-    DATABASE
-    JWT_PASSWORD
+## 5. Getting Started 
 
-## 6. Getting Started 
-
-### 6.1 Prerequisites
+### 5.1 Prerequisites
 
  * Node.js version 17 or higher
- * Webbrowser of your choice, recommended firefox
+ * React version 19.2 or higher
+ * Web browser of your choice, Firefox is recommended
  * Running backend (url see chapter 1)
  * Git or another Git-compatible version control tool
 
-### 6.2 How to get the project
+### 5.2 How to get the project
 
 1. Clone the repository on your local machine
 
@@ -64,29 +59,24 @@ GitHub_CLI: gh repo clone ocbtomi36/car-rental-ui
 ```
 With that command you install all necessary packages.
 
-### 6.3 Start the project
+### 5.3 Start the project
 
-1. Create an ` .env ` file and use the variables names. List you can find section 5.
-
-2. To run the program
+1. To run the program
 
 Before program starts, you need a running backend on your computer.
 
 Go to your project terminal and run command:
 
 ```bash
-    npm start
+    npm run dev
 ```
 
-3. Set this ` newsomesupersecretsecret ` as jwt_password.
-
-4. To log in as admin use this username and password:
+3. To log in as admin use this username and password:
 
 Username: teszt@teszt.com
 Password: malacka
 
 
-
-## 7.License
+## 6.License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
